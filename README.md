@@ -13,7 +13,7 @@
 
 ---
 
-**5+ Production Systems Deployed** · **10+ API Integrations** · **Real-Time Data Processing** · **99.9% Uptime**
+**12+ Production Systems Deployed** · **15+ API Integrations** · **Cross-Platform Mobile Apps** · **99.9% Uptime**
 
 ---
 
@@ -246,6 +246,225 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 ---
 
+### 🔹 AI-Powered Gaming Coach & Analytics Platform
+
+> *Full-stack coaching platform with AI recommendations, real-time stats tracking, and cross-platform mobile app*
+
+**The Challenge:** Build an intelligent platform that analyzes game data, provides AI-powered recommendations, tracks player statistics, and delivers personalized coaching — available via Telegram bot, web app, and native mobile app.
+
+**What I Built:**
+- **AI recommendation engine** analyzing maps, modes, and meta data to suggest optimal strategies
+- Real-time **player statistics dashboard** pulling data from external game APIs
+- **AI Chat Coach** powered by OpenAI GPT for personalized advice and game analysis
+- **Achievement & rewards system** with seasonal points, leaderboards, and redeemable shop
+- **Multi-platform delivery**: Telegram bot, web mini-app, and React Native mobile app (iOS + Android)
+- **Subscription management** with trial periods, auto-expiration, and multiple payment gateways
+- Multi-language support (**English, Russian, Hebrew**) across all interfaces
+
+**Tech Stack:**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
+
+**Architecture:**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│           AI Gaming Coach Platform                       │
+├──────────────┬──────────────┬─────────────┬──────────────┤
+│  AI Engine   │  Data Layer  │  Delivery   │  Monetize    │
+├──────────────┼──────────────┼─────────────┼──────────────┤
+│ Draft Recs   │  PostgreSQL  │  Telegram   │  Subscriptions│
+│ GPT Coach    │  Game API    │  Mini App   │  Multi-Gate  │
+│ Win Rate     │  User Stats  │  Mobile App │  Trial Mgmt  │
+│ Meta Tracker │  Achievements│  REST API   │  Auto-Expire │
+└──────────────┴──────────────┴─────────────┴──────────────┘
+```
+
+**Key Achievements:**
+- ✅ **3 platforms** — Telegram, Web, and Native Mobile (iOS + Android)
+- ✅ AI engine processes **thousands of data points** for each recommendation
+- ✅ **5+ payment methods** integrated (Telegram Stars, crypto, local gateways)
+- ✅ Full subscription lifecycle: trial → pro → expiration → renewal
+- ✅ **3 languages** with complete localization across all interfaces
+- ✅ Published on **App Store** and **Google Play**
+
+---
+
+### 🔹 Community Group Management Bot (Multi-Channel)
+
+> *Automated moderation system managing 9+ Telegram groups with captcha, spam detection, content filtering, and daily analytics*
+
+**The Challenge:** Manage multiple community groups across different languages simultaneously — handle new member verification, spam/link filtering, profanity detection, off-topic monitoring, and provide daily analytics reports — all from a single bot instance.
+
+**What I Built:**
+- **Text-based CAPTCHA system** for new member verification with auto-kick on failure
+- **Intelligent spam detection** with flood control, link filtering, and forwarded message blocking
+- **Profanity filter** with language-aware bad word detection
+- **FAQ auto-reply system** with keyword matching and customizable responses
+- **Admin broadcast system** — send announcements to multiple groups from DM
+- **Daily statistics reports** auto-generated at midnight (joins, leaves, moderation actions)
+- **Off-topic detection** for specialized groups (e.g., teammate-search only)
+- All moderation actions **logged to admin via DM** in real-time
+
+**Tech Stack:**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![asyncio](https://img.shields.io/badge/asyncio-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**Architecture:**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│        Multi-Channel Group Admin Bot                     │
+├──────────────┬──────────────┬─────────────┬──────────────┤
+│  Moderation  │  Engagement  │  Analytics  │  Admin       │
+├──────────────┼──────────────┼─────────────┼──────────────┤
+│ CAPTCHA      │  FAQ Replies │  Daily Stats│  Broadcast   │
+│ Spam Filter  │  Welcome Msg │  Join/Leave │  DM Logging  │
+│ Link Block   │  Off-Topic   │  Mod Actions│  Multi-Lang  │
+│ Profanity    │  Auto-Rules  │  Reports    │  Exemptions  │
+└──────────────┴──────────────┴─────────────┴──────────────┘
+```
+
+**Key Achievements:**
+- ✅ **9 groups managed** simultaneously across 3 languages
+- ✅ **CAPTCHA verification** reduces spam by 95%+
+- ✅ Automated daily reports with zero manual intervention
+- ✅ Real-time admin notifications for all moderation actions
+- ✅ Runs 24/7 with systemd auto-recovery
+
+---
+
+### 🔹 Daily Challenge & Engagement Engine
+
+> *Automated daily challenge system with registration, progress tracking via external APIs, and reward distribution*
+
+**The Challenge:** Keep community members engaged with daily challenges that verify real progress through external game APIs, handle registration windows, track participant progress, and automatically award points to winners.
+
+**What I Built:**
+- **6 challenge types**: game-based (wins, streaks, variety), social media (TikTok, YouTube, Telegram), with extensible template system
+- **Automated scheduling**: challenge posts at 10:00, registration closes at 12:00, winner announced at midnight
+- **Real progress verification** — fetches participant battle data from external APIs before evaluating completion
+- **Social media verification** — checks Telegram group membership via Bot API
+- **Dynamic live updates** — participant count updates in real-time on the post
+- **Achievement points system** — winners receive points redeemable for premium features
+- **Anti-fraud deterrence** — verification warnings and actual membership checks
+
+**Tech Stack:**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-FF6F00?style=flat-square&logo=fastapi&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+
+**Architecture:**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│          Daily Challenge Engine                          │
+├──────────────┬──────────────┬─────────────┬──────────────┤
+│  Scheduler   │  Tracking    │  Verify     │  Rewards     │
+├──────────────┼──────────────┼─────────────┼──────────────┤
+│ Post @10:00  │  Registrations│ API Refresh│  Points      │
+│ Close @12:00 │  Live Count  │  Battle Log│  Winner Pick │
+│ Winner @00:00│  Progress DB │  Membership│  Notifications│
+│ Multi-Channel│  Templates   │  Anti-Fraud│  Leaderboard │
+└──────────────┴──────────────┴─────────────┴──────────────┘
+```
+
+**Key Achievements:**
+- ✅ **6 challenge types** with randomized daily rotation
+- ✅ Real API-based verification — no honor system
+- ✅ Handles **registration windows**, live participant counts, and automated announcements
+- ✅ Multi-language challenge posts across 3 channels simultaneously
+- ✅ Fully autonomous — zero manual intervention needed
+
+---
+
+### 🔹 Multi-Gateway Payment & Subscription System
+
+> *Production payment processing system supporting 5+ gateways with automated subscription lifecycle management*
+
+**The Challenge:** Handle payments from users across different countries with varying payment method preferences — cryptocurrency, local payment processors, in-app purchases, and platform-native payments — while managing subscription states automatically.
+
+**What I Built:**
+- **5+ payment gateway integrations**: Telegram Stars, USDT (crypto), FreeKassa, PayPalych, Apple/Google In-App Purchases
+- **Subscription lifecycle engine**: Free → Trial → Pro → Expired, with automated state transitions
+- **Receipt validation** for both Apple App Store and Google Play Store purchases
+- **Auto-expiration system** — background jobs check and expire subscriptions hourly
+- **User notifications** — alerts before expiration and on status changes
+- **Referral system** with reward tracking and partner dashboard
+- **Webhook handlers** for real-time payment confirmations from all gateways
+
+**Tech Stack:**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Stripe](https://img.shields.io/badge/Payment_APIs-635BFF?style=flat-square&logo=stripe&logoColor=white)
+![Apple](https://img.shields.io/badge/Apple_IAP-000000?style=flat-square&logo=apple&logoColor=white)
+![Google Play](https://img.shields.io/badge/Google_Play_Billing-34A853?style=flat-square&logo=googleplay&logoColor=white)
+
+**Architecture:**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│        Multi-Gateway Payment System                      │
+├──────────────┬──────────────┬─────────────┬──────────────┤
+│  Gateways    │  Subscriptions│  Validation │  Ops        │
+├──────────────┼──────────────┼─────────────┼──────────────┤
+│ Telegram ⭐  │  Trial Mgmt  │  Apple IAP  │  Webhooks   │
+│ USDT Crypto  │  Pro Billing │  Google Play│  Auto-Expire│
+│ FreeKassa    │  Expiration  │  Receipt    │  Notifications│
+│ PayPalych    │  Referrals   │  Verify     │  Dashboard  │
+└──────────────┴──────────────┴─────────────┴──────────────┘
+```
+
+**Key Achievements:**
+- ✅ **5+ payment gateways** in a single unified system
+- ✅ Handles real money — production transactions daily
+- ✅ Automated subscription management with zero manual intervention
+- ✅ Cross-platform: Telegram bot + iOS + Android payment flows
+- ✅ Partner referral system with dedicated analytics dashboard
+
+---
+
+### 🔹 Production Server Infrastructure & Auto-Recovery
+
+> *One-command deployment pipeline with systemd services, health monitoring, and automatic crash recovery*
+
+**What I Built:**
+- **One-command deployment script** — SSH to server, git pull, sync files, restart services
+- **6 systemd services** running in parallel: API server, payment bot, Telegram bot, group admin bot, monitor, backup
+- **Health monitoring service** that checks all services every 15 seconds and auto-restarts failures
+- **Automated database backups** every 6 hours with retention policy
+- **Log rotation** — daily rotation, 7-day retention, compressed archives
+- **Nginx reverse proxy** with SSL and rate limiting
+- **Cloudflare tunnel** for secure server access
+
+**Tech Stack:**
+
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![systemd](https://img.shields.io/badge/systemd-4B275F?style=flat-square&logo=ubuntu&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+
+**Key Achievements:**
+- ✅ **99.9% uptime** across 6 production services
+- ✅ Auto-recovery from crashes within **5 seconds**
+- ✅ One-command deploy with zero downtime
+- ✅ Automated backups every 6 hours
+- ✅ Rate-limited restart protection (5 per 60 seconds)
+
+---
+
 ## Technical Skills
 
 <div align="center">
@@ -259,7 +478,9 @@ My systems currently run **24/7 on production servers** handling real data, real
 ### Specializations
 ![Telegram Bots](https://img.shields.io/badge/Telegram_Bots-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
 ![API Integration](https://img.shields.io/badge/API_Integration-FF6F00?style=for-the-badge&logo=fastapi&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Automation](https://img.shields.io/badge/Automation-4B8BBE?style=for-the-badge&logo=robotframework&logoColor=white)
+![Payments](https://img.shields.io/badge/Payment_Systems-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
 ![Data Analysis](https://img.shields.io/badge/Data_Analysis-013243?style=for-the-badge&logo=numpy&logoColor=white)
 
 ### Tools & Deployment
@@ -276,12 +497,14 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 | Service | Description |
 |---------|-------------|
-| 🤖 **Telegram Bots** | Custom bots with payments, user management, automation |
+| 🤖 **Telegram Bots** | Custom bots with payments, user management, moderation, automation |
+| 📱 **Mobile Apps** | Cross-platform React Native apps with in-app purchases (iOS + Android) |
 | 🔗 **API Integrations** | Connect any API - REST, WebSocket, authenticated endpoints |
+| 💳 **Payment Systems** | Multi-gateway payment processing, subscriptions, receipt validation |
 | ⚡ **Automation Systems** | 24/7 bots that monitor, analyze, and act on data |
-| 📊 **Data Processing** | Real-time analytics, statistical modeling, reporting |
-| 🖥️ **Backend Development** | Scalable Python backends with databases and APIs |
-| 🚀 **Server Deployment** | Linux setup, systemd services, monitoring, CI/CD |
+| 📊 **Data Processing** | Real-time analytics, statistical modeling, AI-powered insights |
+| 🖥️ **Backend Development** | Scalable Python backends with PostgreSQL and async APIs |
+| 🚀 **Server Deployment** | Linux setup, systemd services, monitoring, auto-recovery |
 
 ---
 
@@ -291,11 +514,14 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 | Metric | Value |
 |--------|-------|
-| 🏗️ Production Systems Running | **5+** |
-| 🔌 API Integrations Built | **10+** |
+| 🏗️ Production Systems Running | **12+** |
+| 🔌 API Integrations Built | **15+** |
 | ⏰ System Uptime | **99.9%** |
 | 🌐 Data Sources Processed | **60+** |
-| 🔐 Secure Auth Implementations | **RSA-PSS, HMAC, OAuth** |
+| 📱 Mobile Apps Published | **iOS + Android** |
+| 💳 Payment Gateways Integrated | **5+** |
+| 🌍 Languages Supported | **3 (EN, RU, HE)** |
+| 🔐 Secure Auth Implementations | **RSA-PSS, HMAC, OAuth, Apple Sign-In** |
 
 </div>
 
