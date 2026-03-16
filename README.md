@@ -18,7 +18,6 @@
 
 <br/>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Trademydream2024&theme=github-dark-blue&hide_border=true&border_radius=10&date_format=M%20j%5B%2C%20Y%5D)](https://github.com/Trademydream2024)
 
 </div>
 
