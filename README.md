@@ -163,6 +163,53 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 ---
 
+### 🔹 Beta Tester Onboarding Bot (Telegram)
+
+> *Multi-language Telegram bot for managing Android app beta tester registration with admin approval workflow*
+
+**The Challenge:** Build a complete onboarding flow that guides potential beta testers through registration, validates their information, verifies group membership, and grants access only after manual approval and installation confirmation.
+
+**What I Built:**
+- **Multi-language support** (English, Russian, Hebrew) with localized messages throughout
+- Guided registration flow: requirements acceptance → email collection → group joins → identifier capture
+- **Email validation** with regex and fake-pattern filtering
+- **Group membership verification** via Telegram API (bot must be admin in groups)
+- **Admin approval workflow** with inline buttons for approve/reject
+- **Screenshot verification** — users must send app screenshot before access is granted
+- Download links and instructions sent to users; access granted only after admin approves screenshot
+- JSON-based state persistence for reliable flow across sessions
+
+**Tech Stack:**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_Bot_API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON_Storage-000000?style=flat-square&logo=json&logoColor=white)
+
+**Architecture:**
+
+```
+┌──────────────────────────────────────────────────────────┐
+│           Beta Tester Onboarding Bot                     │
+├──────────────┬──────────────┬─────────────┬──────────────┤
+│  Onboarding  │  Validation │  Admin     │  Access      │
+├──────────────┼──────────────┼─────────────┼──────────────┤
+│ Multi-lang   │  Email      │  Approval   │  Screenshot  │
+│ Flow         │  Groups     │  Workflow   │  Verification│
+│ State Mgmt   │  Data       │  Inline     │  Links +     │
+│ Handlers     │  Persist    │  Buttons    │  Instructions│
+└──────────────┴──────────────┴─────────────┴──────────────┘
+```
+
+**Key Achievements:**
+- ✅ **3 languages** with full translation coverage
+- ✅ Admin controls approval; access granted only after screenshot verification
+- ✅ Clean handler-based architecture with state routing
+- ✅ Secure: credentials loaded from environment variables
+
+**[View on GitHub](https://github.com/Trademydream2024/BetaTestBot)**
+
+---
+
 ### 🔹 Client Management CRM System
 
 > *Custom-built CRM for managing client relationships, tracking interactions, and automating follow-ups*
