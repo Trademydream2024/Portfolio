@@ -288,6 +288,72 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 ---
 
+<details open>
+<summary><h3>:newspaper: AI-Powered Content Generation & Publishing Pipeline</h3></summary>
+
+> *Multi-source content monitoring bot that scrapes official news, video platforms, and community databases, then generates ready-to-publish marketing posts in 3 languages using Claude AI*
+
+<table>
+<tr>
+<td width="60%">
+
+**The Challenge:** Keep multi-language community channels fed with fresh, on-brand content every day — without spending hours manually browsing news sites, watching videos, and writing posts from scratch in three languages.
+
+**What I Built:**
+- :satellite: **Multi-source monitor** — official blogs, YouTube creators, community databases, Reddit threads
+- :brain: **Claude AI generation** — context-aware posts with product knowledge baked into every prompt
+- :globe_with_meridians: **3 languages** — English, Russian, Hebrew (full localization, not translation)
+- :art: **3 content modes** — marketing, informational, creative storytelling
+- :frame_photo: **Paired image prompts** — every post comes with a ready-to-use AI-art prompt
+- :white_check_mark: **Approval queue** — admin reviews before anything goes live
+- :alarm_clock: **Auto-monitoring** — scheduled scans with new-content notifications to admin
+- :outbox_tray: **Multi-channel publishing** — one click to push approved posts to the right channels
+- :card_file_box: **SQLite deduplication** — same source URL never gets posted twice
+
+</td>
+<td width="40%">
+
+```
+┌────────────────────────┐
+│  Content Pipeline      │
+├────────┬───────────────┤
+│Monitor │  AI Generate  │
+│ Blogs  │  Claude API   │
+│ Videos │  3 Languages  │
+│ Reddit │  3 Post Types │
+├────────┼───────────────┤
+│Approve │  Publish      │
+│ Queue  │  Auto-Schedule│
+│ Review │  Multi-Channel│
+│ Edit   │  Image Prompts│
+└────────┴───────────────┘
+```
+
+</td>
+</tr>
+</table>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Claude](https://img.shields.io/badge/Anthropic_Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram_API-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
+![asyncio](https://img.shields.io/badge/asyncio-3776AB?style=flat-square&logo=python&logoColor=white)
+
+**Key Achievements:**
+
+| Metric | Result |
+|--------|--------|
+| Content Sources | **4+ types** — official blog, video API, community DB, forum API |
+| Languages | **3** — EN, RU, HE (native-quality, not auto-translate) |
+| Post Types | **3** — Marketing, Informational, Creative |
+| AI Engine | **Anthropic Claude** with custom product-context prompts |
+| Workflow | **Monitor → Generate → Approve → Publish** (fully inline) |
+| Manual Writing Time Saved | **Hours per day** per channel |
+
+</details>
+
+---
+
 <details>
 <summary><h3>:cloud: Real-Time Weather Intelligence Platform</h3></summary>
 
@@ -504,7 +570,7 @@ My systems currently run **24/7 on production servers** handling real data, real
 | :credit_card: | Payment Gateways Integrated | **5+** |
 | :earth_americas: | Languages Supported | **3 (EN, RU, HE)** |
 | :lock: | Auth Implementations | **RSA-PSS, HMAC, OAuth, Apple Sign-In** |
-| :robot: | Telegram Bots in Production | **4** |
+| :robot: | Telegram Bots in Production | **5** |
 | :people_holding_hands: | Community Groups Managed | **9+** |
 
 </div>
