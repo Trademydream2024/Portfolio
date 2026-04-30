@@ -496,6 +496,61 @@ My systems currently run **24/7 on production servers** handling real data, real
 ---
 
 <details>
+<summary><h3>:bar_chart: Forex Position & Risk Calculator</h3></summary>
+
+> *Mobile-first single-page calculator for forex traders — live FX rates, smart pip-value math for cross pairs and metals, plus inline SMC reference diagrams*
+
+**The Challenge:** Build a fast, distraction-free calculator that lets a trader size their position correctly in seconds — given account balance, risk percentage, stop-loss in pips, and currency pair. The tool needs to handle cross pairs (where the quote currency is not USD), JPY pairs (different pip size), and precious metals (XAU / XAG with custom contract sizes), and stay fully usable on a phone — with no install step and no backend.
+
+**What I Built:**
+- :money_with_wings: **24 instruments** — all major / cross FX pairs plus **XAU/USD** and **XAG/USD**
+- :satellite: **Live exchange rates** via public REST API with **10-minute in-memory caching**
+- :triangular_ruler: **Smart pip-value math** — automatic handling of JPY pairs, metals, and any quote currency
+- :hand: **Manual rate fallback** — user can enter a conversion rate if the API is unreachable
+- :zap: **Pre-set risk buttons** (0.5% / 1% / 2% / 3%) plus free numeric input
+- :chart_with_upwards_trend: **Inline SVG SMC reference cards** — Fair Value Gap and Order Block diagrams (bullish + bearish)
+- :iphone: **Mobile-first responsive UI** with dark glassmorphism theme
+- :feather: **Zero dependencies, no build step** — single ~35 KB `index.html` deployable to any static host
+
+```
+┌────────────────────────┐
+│  Forex Calculator      │
+├────────┬───────────────┤
+│ Inputs  │  Math Engine  │
+│ Balance │  Pip Value    │
+│ Risk %  │  Cross Rates  │
+│ SL Pips │  Lot Size     │
+│ Pair    │  R:R Ratio    │
+├────────┼───────────────┤
+│ Output  │  Reference    │
+│ Lot Size│  SMC Cards    │
+│ Pip $   │  FVG / OB     │
+│ Risk $  │  Live API     │
+│ Reward $│  Static Host  │
+└────────┴───────────────┘
+```
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![SVG](https://img.shields.io/badge/Inline_SVG-FFB13B?style=flat-square&logo=svg&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-FF6F00?style=flat-square&logo=fastapi&logoColor=white)
+
+| Metric | Result |
+|--------|--------|
+| Instruments Supported | **24** (FX majors / crosses + Gold + Silver) |
+| Bundle Size | **~35 KB** total (single file) |
+| Dependencies | **Zero** — no framework, no build |
+| Hosting | **Any static host** (GitHub Pages, Netlify, Vercel) |
+| API Caching | **10-minute** in-memory cache with manual fallback |
+
+**[View on GitHub](https://github.com/Trademydream2024/Forex-Calculate)**
+
+</details>
+
+---
+
+<details>
 <summary><h3>:busts_in_silhouette: Client Management CRM System</h3></summary>
 
 > *Custom CRM for managing client relationships, tracking interactions, and automating follow-ups*
