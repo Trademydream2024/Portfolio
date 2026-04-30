@@ -13,7 +13,7 @@
 <br/>
 
 ```
- 12+ Production Systems  |  15+ API Integrations  |  5+ Payment Gateways  |  99.9% Uptime
+ 13+ Production Systems  |  15+ API Integrations  |  5+ Payment Gateways  |  99.9% Uptime
 ```
 
 <br/>
@@ -442,6 +442,60 @@ My systems currently run **24/7 on production servers** handling real data, real
 ---
 
 <details>
+<summary><h3>:page_facing_up: Branded Document & Quotation System (RTL)</h3></summary>
+
+> *Internal Hebrew/RTL web tool that turns structured forms into pixel-perfect, brand-matching PDF documents — replacing a manual paper-based workflow*
+
+**The Challenge:** A business needed to issue several types of branded paperwork (customer files, quantity sheets, material orders) that were historically filled by hand on printed templates. The goal: a fast, error-proof browser tool that produces ready-to-send PDFs identical to the original printed layout — fully in Hebrew with right-to-left UI.
+
+**What I Built:**
+- :page_with_curl: **6 document types** in a unified single-page interface
+- :art: **Pixel-perfect branded PDFs** that mirror the original printed templates (logo, fonts, spacing)
+- :arrows_counterclockwise: **Dynamic line-item rows** — add, remove, and duplicate items on the fly
+- :books: **Large product catalog** (thousands of profile / SKU options) with smart dropdowns
+- :floppy_disk: **localStorage persistence** — drafts survive refresh and accidental closes
+- :inbox_tray: **Auto-named downloads** — `<customer> - <document type>.pdf`
+- :globe_with_meridians: **Full Hebrew RTL UI** with responsive, mobile-friendly layout
+- :rocket: **One-command local deploy** (`python3 app.py`) — zero infrastructure needed
+
+```
+┌────────────────────────┐
+│  Document Generator    │
+├────────┬───────────────┤
+│Frontend│   Catalog     │
+│ RTL UI │  Profiles     │
+│ Dynamic│  SKUs         │
+│ Forms  │  Options      │
+│ Local- │  Smart Search │
+│ Storage│               │
+├────────┼───────────────┤
+│ Backend│   Rendering   │
+│ Flask  │  Jinja2 HTML  │
+│ REST   │  Playwright   │
+│ API    │  → PDF Bytes  │
+└────────┴───────────────┘
+```
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![Jinja2](https://img.shields.io/badge/Jinja2-B41717?style=flat-square&logo=jinja&logoColor=white)
+![HTML/CSS](https://img.shields.io/badge/HTML%2FCSS_RTL-E34F26?style=flat-square&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+| Metric | Result |
+|--------|--------|
+| Document Types | **6** unified in one tool |
+| Catalog Size | **Thousands** of options |
+| Layout | **Pixel-perfect** brand match |
+| Language | **Hebrew RTL** |
+| Doc Generation | **Seconds** (was minutes by hand) |
+
+</details>
+
+---
+
+<details>
 <summary><h3>:busts_in_silhouette: Client Management CRM System</h3></summary>
 
 > *Custom CRM for managing client relationships, tracking interactions, and automating follow-ups*
@@ -562,7 +616,7 @@ My systems currently run **24/7 on production servers** handling real data, real
 
 | | Metric | Value |
 |:-:|--------|:-----:|
-| :building_construction: | Production Systems Running | **12+** |
+| :building_construction: | Production Systems Running | **13+** |
 | :electric_plug: | API Integrations Built | **15+** |
 | :alarm_clock: | System Uptime | **99.9%** |
 | :globe_with_meridians: | Data Sources Processed | **60+** |
